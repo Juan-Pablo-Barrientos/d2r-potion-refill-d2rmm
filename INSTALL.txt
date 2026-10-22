@@ -1,0 +1,28 @@
+Potion Refill for D2RMM
+=======================
+
+This zip has two parts. Each goes in a different place:
+
+  d2rl-potion-refill.dll   The plugin. It refills your belt.
+  PotionRefill\            The plugin's settings page in D2RMM.
+
+1. Install D2RLoader (https://d2rloader.net).
+
+2. Copy d2rl-potion-refill.dll into
+   <Diablo II Resurrected folder>\d2rloader\plugins\
+   D2RMM can't put files there, so this step is done by hand. D2RMM
+   reinstalls don't touch it. Copy it again only when the plugin updates.
+
+3. Copy the PotionRefill folder into D2RMM's mods folder. In D2RMM, enable
+   Potion Refill, choose your settings, and click Install Mods.
+
+4. Start the game with D2RLoader using D2RMM's output mod (for example, set
+   default_mod = "D2RMM" in d2rloader\config\d2rloader.toml).
+
+Step 3 is optional. Without it, the plugin uses its default settings.
+
+To check it works, open d2rloader\logs\potion-refill.log. You should see
+"send=ok", and "Using settings from the active mod" if you did step 3.
+
+Plugin source and plugin-only downloads:
+https://github.com/Juan-Pablo-Barrientos/d2r-potion-refill

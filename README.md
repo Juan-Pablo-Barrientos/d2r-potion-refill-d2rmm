@@ -16,23 +16,31 @@ plugin's options in D2RMM.
 
 ## Install
 
+Download `PotionRefill-D2RMM.zip` from the
+[latest release](../../releases/latest). It has two parts, and each goes in a
+different place:
+
+| In the zip | What it is | Where it goes |
+| --- | --- | --- |
+| `d2rl-potion-refill.dll` | The plugin. It refills your belt. | `<game folder>\d2rloader\plugins\` |
+| `PotionRefill\` | The plugin's settings page in D2RMM. | D2RMM's `mods` folder |
+
 1. Install [D2RLoader](https://d2rloader.net). Tested with 1.3.1-beta.
-2. Download `PotionRefill-D2RMM.zip` from the
-   [latest release](../../releases/latest).
-3. Copy `d2rl-potion-refill.dll` from the zip into
-   `<game folder>\d2rloader\plugins\`.
-4. Extract the `PotionRefill` folder into D2RMM's `mods` folder. Enable it,
+2. Copy `d2rl-potion-refill.dll` into `<game folder>\d2rloader\plugins\`.
+3. Copy the `PotionRefill` folder into D2RMM's `mods` folder. Enable it,
    choose your settings, and click **Install Mods**.
-5. Start the game with D2RLoader using D2RMM's output mod. For example, set
+4. Start the game with D2RLoader using D2RMM's output mod. For example, set
    `default_mod = "D2RMM"` in `d2rloader\config\d2rloader.toml`.
 
-### Why the DLL is copied by hand
+Step 3 is optional. Without it, the plugin uses its default settings.
+
+### Why D2RMM doesn't install the plugin
 
 D2RMM only lets mods write inside its own output mod
 (`mods\D2RMM\D2RMM.mpq`). D2RLoader loads plugins only from
 `<game>\d2rloader\plugins` or `<game>\mods\<mod>\d2rloader\plugins`, which are
 outside that folder. D2RMM reinstalls don't touch the plugins folder, so you
-only need to copy the DLL once, and again when the plugin updates.
+copy the DLL only once, and again when the plugin updates.
 
 ## How it works
 
